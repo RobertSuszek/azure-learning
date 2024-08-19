@@ -1,0 +1,44 @@
+Prerequisites:
+    1) Login to portal.azure.com
+
+Task 1:
+    1) Search for "Microsoft Entra ID" resource, open it
+    2) Under "Manage", select "Users"
+    3) Create new user:
+        a) Click "New user", then select "Create new user"
+        b) Fill out "Basics" and "Properties" tab accordingly
+        c) Click on "Review + create", then click on "Create"
+    3) Invite external user:
+        a) Click "New user", then select "Invite external user"
+        b) Fill out "Basics" and "Properties" tab accordingly
+        c) Click on "Review + create", then click on "Create"
+
+Task 2:
+    1) Search for "Microsoft Entra ID" resource, open it
+    2) Under "Manage", select "Groups"
+    3) Assigned group: # If you don't have Microsoft Azure Entra ID P1 or P2 license, you won't be able to create a group with dynamic user assignment.
+        a) Click "New group"
+        b) Set "Group type" to "Security"
+        c) Fill out "Group name" and "Group description" fields accordingly
+        d) Set "Membership Type" to "Assigned"
+        e) Click on "No owners selected" under "Owners", select your user, click "Select"
+        f) Click on "No members selected" under "Members", click on "Users", select users, click "Select"
+        g) Click on "Create"
+    4) Dynamic group: # Only available with Microsoft Azure Entra ID P1 or P2 license.
+        a) Click "New group"
+        b) Set "Group type" to "Security"
+        c) Fill out "Group name" and "Group description" fields accordingly
+        d) Set "Membership Type" to "Dynamic User"
+        e) Click on "No owners selected" under "Owners", select your user, click "Select"
+        f) Click on "Add dynamic query" under "Dynamic user members"
+        g) Under "Property" select "jobTitle", under "Operator" select "Equals", in "Value" put "IT Lab Administrator"
+        h) Click on "Save"
+        i) Click on "Create"
+
+Cleanup:
+    1) Search for "Microsoft Entra ID" resource, open it
+    2) Under "Manage", select "Users"
+    3) Delete all users created in this Lab
+    4) Go back to "Microsoft Entra ID" resource
+    5) Under "Manage", select "Groups"
+    6) Delete all groups created in this Lab.
